@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<h1>Green Market</h1>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div id = "tab" class="tab">
+  <p  id= "tab1" class="tablinks" onclick="openInfo(event, 'Client')">Client</p>
+  <p  id= "tab2" class="tablinks" onclick="openInfo(event, 'Products')">Produits</p>
+  <p  id= "tab3" class="tablinks" onclick="openInfo(event, 'Cart')">Panier</p>
+</div>
+
+<!-- Tab content -->
+<!-- <div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="Vegetarian">Vegetarian</option>
+    <option value="GlutenFree">GlutenFree</option>
+    <option value="VegetarianAndGlutenFree">Vegetarian And GlutenFree</option>
+    <option value="None">None</option>
+    </select>
+</div> -->
+
+<div id = "Client" class="tabcontent">
+    <h3>Information client</h3>
+  <p>Parlez-nous un peu de vous..</p>
+	Choisir une categorie:<br />
+    <input type="checkbox" id="vegetarian" onchange="ClientPreferences(this.id)"/>Vegetarian<br />
+    <input type="checkbox" id="glutenFree"  onchange="ClientPreferences(this.id)"/>GlutenFree<br />
+    <input type="checkbox" id="organic"  onchange="ClientPreferences(this.id)"/>Organique<br />
+    <input type="checkbox" id="none"  onchange="ClientPreferences(this.id)"/>None<br />
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Quel produit désirs vous?</h3>
+  <p>Nous avons présélectionné les produits en fonction de vos restrictions.</p>
+    Choisissez les articles à acheter:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Ajouter au panier
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Panier</h3>
+  <p>Voici votre panier.</p>
+  <div id="displayCart"></div>
+</div>
+
+<p class="footer-signature">Site créer par Badr Ibrahimi</p>
+
+<script src="js/groceries.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
